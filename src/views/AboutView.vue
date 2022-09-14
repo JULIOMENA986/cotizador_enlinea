@@ -6,7 +6,7 @@
 
                 <!-- Icon -->
                 <div class="fadeIn first">
-                  <img src="@/assets/logo.png" id="icon" alt="User Icon" />
+                  <img src="@/assets/usu.png" id="icon" alt="User Icon" />
                 </div>
 
                 <!-- Login Form -->
@@ -50,7 +50,7 @@ export default {
           "email" : this.email,
           "password": this.password
         };
-        axios.post('http://10.232.169.141:80/api/auth/login', json)
+        axios.post('http://10.232.169.141:80/api/login', json)
         .then( data =>{
            if(data.data.status == "ok"){
              localStorage.token = data.data.result.token;
